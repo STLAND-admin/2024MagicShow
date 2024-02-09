@@ -28,7 +28,7 @@ def HappyNewYear(name: str= "Happy New Year!" ,wherefrom: str= "nowhere", gender
 
     # 将 前三张 取出 并放入 数组中任意位置
     first_three = rolled_array[:3]
-    insert_pos = np.random.randint(0, len(rolled_array) - 3)
+    insert_pos = np.random.randint(1, len(rolled_array) - 3) # 必须插入中间
     rolled_array = np.insert(rolled_array[3:], insert_pos, first_three)
     print(f"取出前三张：{first_three}并放入任意位置：{insert_pos}")
     print(rolled_array)
@@ -50,7 +50,7 @@ def HappyNewYear(name: str= "Happy New Year!" ,wherefrom: str= "nowhere", gender
     else:
         pick_num = 3
     picked_array = rolled_array[:pick_num]
-    insert_pos = np.random.randint(0, len(rolled_array) - pick_num)
+    insert_pos = np.random.randint(1, len(rolled_array) - pick_num)
     rolled_array = np.insert(rolled_array[pick_num:], insert_pos, picked_array)
     print("南方人 1 张 北方人 2 张 不确定 3 张")
     print(f"取出{pick_num}张：{picked_array}并放入任意位置：{insert_pos}")
