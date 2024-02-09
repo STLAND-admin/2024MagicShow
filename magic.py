@@ -50,7 +50,7 @@ def HappyNewYear(name: str= "Happy New Year!" ,wherefrom: str= "nowhere", gender
     else:
         pick_num = 3
     picked_array = rolled_array[:pick_num]
-    insert_pos = np.random.randint(1, len(rolled_array) - pick_num)
+    insert_pos = np.random.randint(0, len(rolled_array) - pick_num) # 这里不是必须的
     rolled_array = np.insert(rolled_array[pick_num:], insert_pos, picked_array)
     print("南方人 1 张 北方人 2 张 不确定 3 张")
     print(f"取出{pick_num}张：{picked_array}并放入任意位置：{insert_pos}")
